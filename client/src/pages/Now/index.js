@@ -12,6 +12,7 @@ import waveImg from "../../media/wave-img.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import ClipLoader from "react-spinners/ClipLoader";
+import forestImg from "../../media/forest.jpg";
 import {Helmet} from "react-helmet"
 import { FacebookShareCount, FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
 
@@ -34,7 +35,7 @@ export default function BlogPost(props) {
     // console.log(props.match.params.post)
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at("my.blog.uid", param)
+        Prismic.Predicates.at('document.type', 'now'),
       );
       if (response) {
         setDocData(response.results[0]);
@@ -59,17 +60,39 @@ export default function BlogPost(props) {
 
   return (
     <div>
-        
-      <div className="blog-post-page">
-        <div className="back-link">
-          <Link to="/thoughts"><FontAwesomeIcon className="icon-margin" icon={faChevronLeft}></FontAwesomeIcon>back</Link>
-        </div>
+           <div
+        className="blog-blue-block"
+        style={{
+          backgroundImage: `url(${forestImg})`,
+          // backgroundColor: `#21605c`,
+          // opacity: `100%`,
+          backgroundBlendMode: `multiply`,
+          backgroundPosition: `center`,
+          backgroundSize: `cover`,
+          backgroundRepeat: `no-repeat`,
+          // backgroundAttachment: `fixed`,
+          // height: `${this.props.height}`,
+          height: `15vh`,
+          width: "100%",
+          color: "white",
+          display: `flex`,
+          flexDirection: "column",
+          alignItems: `center`,
+          justifyContent: "center",
+          position: `relative`,
+          
+        }}
+      >
+           {/* <p>now</p> */}
+      </div>
+      <div className="blog-post-page now-page">
+   
         {doc ? (
           <div className="blog-content">
                <Helmet>
                 <meta charSet="utf-8" />
-                <title>{RichText.asText(doc.data.title)}</title>
-                <meta name="description" content={doc.data.short_description[0].text} charSet="utf-8" />
+                <title>{RichText.asText(doc.data.now_title)}</title>
+                {/* <meta name="description" content={doc.data.short_description[0].text} charSet="utf-8" /> */}
                 <link rel="canonical" href={shareUrl} />
             </Helmet>
             {/* <div className="off-image-container">
@@ -78,10 +101,10 @@ export default function BlogPost(props) {
                                 src={doc.data.blog_image.url}
                               />
                             </div> */}
-            <h1 className="blog-title">{RichText.asText(doc.data.title)}</h1>
+            <h1 className="blog-title">{RichText.asText(doc.data.now_title)}</h1>
             <RichText
               className="modal-description"
-              render={doc.data.blog_text}
+              render={doc.data.now_content}
               linkResolver={linkResolver}
             />
             {/* <p >{thisModal.description}</p> */}
@@ -96,21 +119,7 @@ export default function BlogPost(props) {
         />
         </div>
         )}
-        <div className="share-block">
-        {/* <div className="share-btns">
-          <FacebookShareButton url={shareUrl}>
-            
-              <img className="social-share-icon" src={fbGrey}/>
-              </FacebookShareButton>
-          <TwitterShareButton url={shareUrl}><img className="social-share-icon" src={twitGrey}/></TwitterShareButton>
-          <LinkedinShareButton url={shareUrl}>
-       
-              <img className="social-share-icon" src={linkedGrey}/>
-             </LinkedinShareButton>
-        </div>
-        <p>Share</p>
-        </div> */}
-        </div>
+  
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 .resources-text-content {
   display: flex;
   flex-direction: column;
-  color: #196196;
+  color: #21605c;
   /* justify-content: center; */
 }
 
@@ -19,7 +19,7 @@
   font-size: 1rem;
   max-width: 750px;
   margin: 0px auto;
-  color: #196196;
+  color: #21605c;
 }
 
 .vert-line {
@@ -59,7 +59,7 @@
 
 .resources-page .the-button:hover {
   color:#F9FAFB;
-  background: #196196;
+  background: #21605c;
   border: 1px solid #fff0;
 }
 

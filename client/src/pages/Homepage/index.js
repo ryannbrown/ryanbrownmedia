@@ -9,6 +9,7 @@ import HomeBlueBlock from "../../components/homepage/HomeBlueBlock"
 import HomeStoreBlock from "../../components/homepage/HomeStoreBlock"
 import HomeSubscribeBlock from "../../components/homepage/HomeSubscribeBlock"
 import Footer from "../../components/Footer/index"
+import forestImg from "../../media/forest.jpg"
 
 export default class Homepage extends Component {
 
@@ -29,11 +30,35 @@ export default class Homepage extends Component {
         return (<div>
              {/* <Navbar></Navbar> */}
             <div className="homepage-content">
-               <HomeHero></HomeHero> 
-               <HomeBlueBlock></HomeBlueBlock>
+            <div
+        className="blog-blue-block"
+        style={{
+          backgroundImage: `url(${forestImg})`,
+          // backgroundColor: `#21605c`,
+          // opacity: `100%`,
+          backgroundBlendMode: `multiply`,
+          backgroundPosition: `center`,
+          backgroundSize: `cover`,
+          backgroundRepeat: `no-repeat`,
+          // backgroundAttachment: `fixed`,
+          // height: `${this.props.height}`,
+          height: `15vh`,
+          width: "100%",
+          color: "white",
+          display: `flex`,
+          flexDirection: "column",
+          alignItems: `center`,
+          justifyContent: "center",
+          position: `relative`,
+          
+        }}
+      >
+      </div>
+               {/* <HomeHero></HomeHero> */}
+                {/* <HomeBlueBlock></HomeBlueBlock> */}
                <HomeAuthorBlock></HomeAuthorBlock>
-               <HomeSubscribeBlock></HomeSubscribeBlock>
-               <HomeStoreBlock></HomeStoreBlock>
+               {/* <HomeSubscribeBlock></HomeSubscribeBlock> */}
+               {/* <HomeStoreBlock></HomeStoreBlock> */}
             </div>
             
         </div>

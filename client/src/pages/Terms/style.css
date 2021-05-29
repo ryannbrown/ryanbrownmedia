@@ -3,24 +3,18 @@
 } */
 .white-block {
   /* margin-top:10vh; */
-  height: 30vh;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.about-content .white-block:first-child {
-height:15vh;
-}
 .pink-block {
-height:100% !important;
-min-height:70vh;
+  height: 60vh;
   background-color: #f4f4f4;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding:50px 0px;
 }
 
 .img-container {
@@ -36,7 +30,7 @@ min-height:70vh;
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 650px;
+  max-width: 590px;
   margin: 0 auto;
 }
 
@@ -89,7 +83,7 @@ min-height:70vh;
 
 @media (max-width: 997px) {
   .about {
-    /* padding: 25px; */
+    padding: 25px;
   }
   .about-contact {
     padding: 30px;
@@ -98,7 +92,7 @@ min-height:70vh;
 
 @media (max-width: 750px) {
   .about {
-    /* padding: 25px; */
+    padding: 25px;
   }
   .about-contact {
     padding: 25px;
@@ -263,72 +257,5 @@ min-height:70vh;
     width: 200px;
     position: absolute;
     right: 35%;
-  }
-}
-
-
-
-
-.map {
-  position:relative;
-   height: 360px;
-    width: 711px;
-}
-
-
-
-.story-block {
-  height:50px;
-}
-
-/* MAP MARKERS */
-
-.lni-map-marker, .lni-home {
-  position:absolute;
-  color:#21605c;
-  cursor:pointer;
-  font-size:22px;
-}
-
-.juneau {
-  top: 17%;
-  left: 7%;
-}
-
-.vilcabamba {
-  top: 69%;
-  left: 27%;
-}
-
-.lni-home {
-  top: 39%;
-  left: 23%;
-}
-
-.colorado {
-  left: 17%;
-  top: 36%;
-}
-.budapest {
-  left: 52%;
-  top: 28%;
-}
-.thailand {
-  left: 74.5%;
-  top: 50%;
-}
-
-.zambia {
-  top: 66%;
-  left: 53%;
-}
-
-
-
-
-@media(max-width:600px) {
-  .map {
-  height: 210px;
-  width: 400px;
   }
 }

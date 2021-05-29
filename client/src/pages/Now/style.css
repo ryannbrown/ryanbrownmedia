@@ -1,0 +1,13 @@
+.now-page .blog-title{
+    text-align:center;
+
+}
+
+.now-page {
+    max-width:1200px !important;
+    padding:25px;
+}
+
+.blog-post-page h1 {
+text-align:left;
+}

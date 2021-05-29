@@ -12,7 +12,7 @@ export default function Resources() {
         className=""
         style={{
           backgroundImage: `url(${waveImg})`,
-          // backgroundColor: `#196196`,
+          // backgroundColor: `#21605c`,
           // opacity: `100%`,
           backgroundBlendMode: `multiply`,
           backgroundPosition: `center top`,

@@ -19,7 +19,7 @@ import { FacebookShareCount, FacebookShareButton, FacebookIcon, TwitterShareButt
 // import logo from '../../media/logo.png'
 const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
 
-export default function BlogPost(props) {
+export default function WebdevDetails(props) {
   const apiEndpoint = REACT_APP_PRISMIC_API;
   const accessToken = REACT_APP_PRISMIC_TOKEN;
 
@@ -30,11 +30,11 @@ export default function BlogPost(props) {
 
   React.useEffect(() => {
     // let id = Object.values(this.props.match.params);
-    let param = props.match.params.post;
+    let param = props.match.params.works;
     // console.log(props.match.params.post)
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at("my.blog.uid", param)
+        Prismic.Predicates.at("my.works.uid", param)
       );
       if (response) {
         setDocData(response.results[0]);
@@ -57,19 +57,22 @@ export default function BlogPost(props) {
     fetchPlugins();
   }, []);
 
+
+
   return (
     <div>
         
-      <div className="blog-post-page">
+      <div className="work-post-page">
         <div className="back-link">
-          <Link to="/thoughts"><FontAwesomeIcon className="icon-margin" icon={faChevronLeft}></FontAwesomeIcon>back</Link>
+          <Link to="/webdev"><FontAwesomeIcon className="icon-margin" icon={faChevronLeft}></FontAwesomeIcon>back</Link>
         </div>
         {doc ? (
           <div className="blog-content">
                <Helmet>
                 <meta charSet="utf-8" />
-                <title>{RichText.asText(doc.data.title)}</title>
-                <meta name="description" content={doc.data.short_description[0].text} charSet="utf-8" />
+                <title>{RichText.asText(doc.data.work_title)}</title>
+           
+                {/* <meta name="description" content={doc.data.short_description[0].text} charSet="utf-8" /> */}
                 <link rel="canonical" href={shareUrl} />
             </Helmet>
             {/* <div className="off-image-container">
@@ -78,13 +81,38 @@ export default function BlogPost(props) {
                                 src={doc.data.blog_image.url}
                               />
                             </div> */}
-            <h1 className="blog-title">{RichText.asText(doc.data.title)}</h1>
+            <h1 className="blog-title">{RichText.asText(doc.data.work_title)}</h1>
+            {doc.data.site_link.url ? <a target="_blank" rel="noopenner" href={doc.data.site_link.url}><button>GO TO SITE</button></a> : <button>LINK COMING SOON</button> }
+            <i><p className="blog-subtitle">{RichText.asText(doc.data.work_subtitle)}</p></i>
             <RichText
               className="modal-description"
-              render={doc.data.blog_text}
+              render={doc.data.work_description}
               linkResolver={linkResolver}
             />
             {/* <p >{thisModal.description}</p> */}
+            <div className="image-grid">
+            {/* <div 
+              className="works-description-img-1"
+              alt="cover"
+              style={{backgroundImage:`url(${doc.data.grid_img_1.url})`}}
+              />
+          {doc.data.grid_img_2.url && <div 
+              className="works-description-img-2"
+              alt="cover"
+              style={{backgroundImage:`url(${doc.data.grid_img_2.url})`}}
+              />}
+              </div> */}
+            <img
+              className="works-description-img-1"
+              alt="cover"
+              src={doc.data.grid_img_1.url}
+              />
+          {doc.data.grid_img_2.url && <img 
+              className="works-description-img-2"
+              alt="cover"
+              src={doc.data.grid_img_2.url}
+              />}
+              </div>
           </div>
         ) : (
           <div className="loading-block">
@@ -97,19 +125,19 @@ export default function BlogPost(props) {
         </div>
         )}
         <div className="share-block">
-        {/* <div className="share-btns">
-          <FacebookShareButton url={shareUrl}>
-            
-              <img className="social-share-icon" src={fbGrey}/>
-              </FacebookShareButton>
-          <TwitterShareButton url={shareUrl}><img className="social-share-icon" src={twitGrey}/></TwitterShareButton>
-          <LinkedinShareButton url={shareUrl}>
-       
-              <img className="social-share-icon" src={linkedGrey}/>
-             </LinkedinShareButton>
-        </div>
-        <p>Share</p>
-        </div> */}
+        {/* <div className="share-btns"> */}
+              {/* <FacebookShareButton url={shareUrl}> */}
+              {/* <FacebookIcon size={32} round={true}></FacebookIcon> */}
+              {/* <img className="social-share-icon" src={fbGrey}/> */}
+              {/* </FacebookShareButton> */}
+          {/* <TwitterShareButton url={shareUrl}><img className="social-share-icon" src={twitGrey}/></TwitterShareButton> */}
+          {/* <LinkedinShareButton url={shareUrl}> */}
+              {/* <LinkedinIcon size={32} round={true}> */}
+              {/* <img className="social-share-icon" src={linkedGrey}/> */}
+             {/* </LinkedinShareButton> */}
+        {/* </div> */}
+        {/* <p>Share</p> */}
+      {/* </div> */}
         </div>
       </div>
     </div>

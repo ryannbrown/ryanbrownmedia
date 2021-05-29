@@ -23,6 +23,9 @@ import About from "./pages/About"
 import Homepage from "./pages/Homepage/index"
 import Blog from "./pages/Blog/index"
 import Resources from "./pages/Resources/index"
+import Now from "./pages/Now/index"
+import Webdev from "./pages/Webdev/index"
+import WebdevDetails from "./pages/WebdevDetails/index"
 import Speaking from "./pages/Speaking/index"
 import BlogPost from "./pages/BlogPost/index"
 import ScrollToTop from "./utils/scrollToTop.js"
@@ -62,17 +65,22 @@ class App extends Component {
              <Fragment>
                <Helmet>
                       <meta charSet="utf-8" />
-                      <title>Unbreakable</title>
-                      <content>Unbreakable by Carolyn Skowron</content>
+                      <title>Ryan Brown Media</title>
+                      <content>Life | Web Design | Inspiration</content>
                       {/* <link rel="canonical" href="http://www.colemandefense.com/" /> */}
                   </Helmet>
-               <Nav client={context.client} checkout={checkout} isCartOpen={context.isCartOpen}></Nav>
+               <Nav
+                // client={context.client} checkout={checkout} isCartOpen={context.isCartOpen}
+                ></Nav>
                <ScrollToTop / >
              <Switch>
                {/* <Route path="/" component={Page}/> */}
-               <Route path="/blog/:post" component={BlogPost}/>
-             <Route path="/blog" component={Blog}/>
+               <Route path="/thoughts/:post" component={BlogPost}/>
+             <Route path="/thoughts" component={Blog}/>
              <Route path="/about" component={About}/>
+             <Route path="/now" component={Now}/>
+             <Route path="/webdev/:works" component={WebdevDetails}/>
+             <Route path="/webdev" component={Webdev}/>
              <Route exact path="/resources" component={Resources}/>
              <Route exact path="/speaking-engagements" component={Speaking}/>
              <Route exact path="/" component={Homepage}/>
@@ -82,11 +90,11 @@ class App extends Component {
                {/* <Route exact path="/shop" render={(props) => <Shop client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
               handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} /> */}
 
-              <Route exact path="/shop/:collection/:item" render={(props) => <Products history={history} client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
+              {/* <Route exact path="/shop/:collection/:item" render={(props) => <Products history={history} client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
              handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} />
 
               <Route path="/shop/:collection" render={(props) => <ShopCollection history={history} client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
-             handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} />
+             handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} /> */}
               {/* <Route exact path="/getit" render={(props) => <ShopItem history={history} client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
              handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} /> */}
                <Route path="/" component={Homepage}/>

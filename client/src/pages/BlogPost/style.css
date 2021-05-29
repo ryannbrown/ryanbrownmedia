@@ -1,6 +1,7 @@
 .blog-post-page {
   max-width: 700px;
-  margin: 50px auto;
+  margin: 0px auto;
+  min-height:100vh;
 }
 
 .icon-margin {
@@ -28,7 +29,7 @@
 }
 
 .blog-content * {
-  margin: 25px 0px;
+  margin: 15px 0px;
 }
 
 .blog-content li {

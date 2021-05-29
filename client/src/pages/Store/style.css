@@ -295,7 +295,7 @@ input::-webkit-inner-spin-button {
   /* background-color:transparent !important; */
   font-size: 14px;
   padding: 10px 30px;
-  background-color: #196196;
+  background-color: #21605c;
   color: #fff;
   margin: 0;
   margin-left: 10px;
@@ -461,7 +461,7 @@ input::-webkit-inner-spin-button {
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   transition: transform 0.15s ease-in-out;
-  z-index: 200;
+  z-index: 1050;
 }
 
 .Cart--open {
@@ -717,7 +717,7 @@ select.Product__option {
 }
 
 span.prod-price {
-  font-family: "ivymode", sans-serif;
+  /* font-family: "ivymode", sans-serif; */
   font-weight: 300;
   font-style: normal;
   letter-spacing: 2.5px;
