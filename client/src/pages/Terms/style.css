@@ -35,7 +35,7 @@
 }
 
 .about h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 15px;
   color: #21605c;
 }
@@ -68,7 +68,7 @@
 }
 
 .about-contact h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #21605c;
   margin-bottom: 15px;
 }
@@ -119,7 +119,7 @@
   .about-contact {
     width: 75%;
     text-align: center;
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -144,7 +144,7 @@
   }
   .about-contact {
     /* width:50%; */
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 }
 @media (min-width: 668px) and (max-width: 996px) {
