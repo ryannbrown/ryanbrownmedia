@@ -1,5 +1,5 @@
 .work-post-page {
-    max-width:1200px;
+    max-width:1100px;
     margin:0px auto;
 }
 
@@ -10,7 +10,7 @@
 
 .image-grid{
     display:flex;
-    max-width:1200px;
+    max-width:1100px;
     flex-wrap:wrap;
 }
 
