@@ -54,6 +54,7 @@ button {
   /* font-family: 'Roboto', sans-serif; */
   /* font-family: adelle, serif; */
   letter-spacing: 0.09rem;
+  line-height:1.5;
 }
 /* .App {
   background-image:url(../src/media/moroccan-flower.png);
@@ -120,3 +121,7 @@ button:hover {
   justify-content:center;
 
 }
+@media (max-width:667px) {
+.thebtn {
+  width:100%;
+}}

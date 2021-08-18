@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 
 import "./style.css";
 import { Link } from "react-router-dom";
-import waveImg from "../../media/wave-img.jpg";
+// import waveImg from "../../media/wave-img.jpg";
 
 export default function Speaking() {
   return (
@@ -11,7 +11,7 @@ export default function Speaking() {
       <div
         className=""
         style={{
-          backgroundImage: `url(${waveImg})`,
+          // backgroundImage: `url(${waveImg})`,
           // backgroundColor: `#21605c`,
           // opacity: `100%`,
           backgroundBlendMode: `multiply`,

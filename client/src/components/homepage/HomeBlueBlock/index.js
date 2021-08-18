@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom"
 import "./style.css";
 // import profPic from "../../media/5.PNG"
-import waveImg from "../../../media/wave-img.jpg";
+// import waveImg from "../../../media/wave-img.jpg";
 import favWhite from "../../../media/fav-white.png";
 
 export default class HomeBlueBlock extends Component {
@@ -26,7 +26,7 @@ export default class HomeBlueBlock extends Component {
       <div
         className="home-blue-block"
         style={{
-          backgroundImage: `url(${waveImg})`,
+          // backgroundImage: `url(${waveImg})`,
           // backgroundColor: `#21605c`,
           // opacity: `100%`,
           backgroundBlendMode: `multiply`,

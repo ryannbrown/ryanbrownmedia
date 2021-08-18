@@ -1,0 +1,39 @@
+.review-block {
+    max-width:1100px;
+    margin:0px auto;
+    height:100%;
+    min-height:25vh;
+    margin-bottom:100px;
+}
+
+.review-block h2 {
+    text-align:left;
+    padding:0px 0px 0px 50px;
+    margin-block-end: 15px;
+}
+
+.slick-slide {
+    text-align:left;
+    padding:0px 0px 0px 50px;
+    font-size:14px;
+}
+
+.slick-next:before, .slick-prev:before {
+    color:#21605c;
+}
+
+@media(max-width:667px) {
+.review-block h2 {
+    text-align:center;
+    padding:0px 50px;
+}
+
+    .slick-slider {
+        width:100%;
+        margin:0px auto;
+    }
+    .slick-slide {
+        width:100%;
+        padding:0px 25px;
+    }
+}

@@ -130,7 +130,8 @@ console.log("all years", allYears)
               /> */}
             <h1>{post.data.title[0].text}</h1>
           </Link>
-          <p>{post.data.date}</p>
+          {/* <p>{post.data.date}</p> */}
+          <p>{Moment(doc.last_publication_date).format("MMMM DD, YYYY")}</p>
           <p>{post.data.short_description[0].text}</p>
         </div>
       )

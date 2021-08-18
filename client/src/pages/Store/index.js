@@ -2,7 +2,7 @@
 // import Navbar from 'react-bootstrap/Navbar'
 import React, { Component } from 'react';
 import './style.css';
-import waveImg from "../../media/wave-img.jpg"
+// import waveImg from "../../media/wave-img.jpg"
 import Products from "../../components/StoreComponents/Products";
 import Cart from "../../components/StoreComponents/Cart";
 import Nav from "../../components/Nav"
@@ -61,7 +61,7 @@ export default class Store extends Component {
           {context => (
             <div className="App">
               <header  style={{
-          backgroundImage: `url(${waveImg})`,
+          // backgroundImage: `url(${waveImg})`,
           backgroundBlendMode: `multiply`,
           backgroundPosition: `center top`,
           backgroundSize: `cover`,

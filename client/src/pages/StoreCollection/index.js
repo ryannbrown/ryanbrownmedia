@@ -6,7 +6,7 @@ import Products from "../../components/StoreComponents/Products";
 import Cart from "../../components/StoreComponents/Cart";
 import Nav from "../../components/Nav";
 import { Link, useRouteMatch } from "react-router-dom";
-import waveImg from "../../media/wave-img.jpg";
+// import waveImg from "../../media/wave-img.jpg";
 import history from "../../App";
 import {
   ThemeContextConsumer,
@@ -120,7 +120,7 @@ export default class StoreCollection extends Component {
           <div className="App">
             <header
               style={{
-                backgroundImage: `url(${waveImg})`,
+                // backgroundImage: `url(${waveImg})`,
                 backgroundBlendMode: `multiply`,
                 backgroundPosition: `center top`,
                 backgroundSize: `cover`,

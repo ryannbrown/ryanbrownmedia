@@ -6,6 +6,27 @@
     height:100%;
 }
 
+.contact-block {
+        max-width:1100px;
+        margin:0px auto;
+        height:100%;
+        min-height:25vh;
+        display:flex;
+        /* align-items: flex-start; */
+        /* justify-content: center; */
+        flex-direction: column;
+        padding:50px;
+}
+
+.contact-block .thebtn {
+    /* margin-left:25px; */
+}
+
+.contact-btn-wrapper {
+    display:flex;
+    justify-content: center;
+}
+
 .hp-btn-block {
     /* min-height: 25vh; */
     height: 100%;
@@ -15,6 +36,10 @@
     position: relative;
     justify-content: flex-start;
     margin-top:5px;
+}
+
+.review-block {
+    margin:0px 25px;
 }
 
 @media(max-width:667px) {
@@ -32,6 +57,12 @@
     }
 }
 
+
+.contact-block img {
+    width:150px;
+    border-radius:75px;
+    margin:0px auto;
+}
 
 
 /* 
