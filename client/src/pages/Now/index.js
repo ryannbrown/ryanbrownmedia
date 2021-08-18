@@ -15,6 +15,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import forestImg from "../../media/forest.jpg";
 import {Helmet} from "react-helmet"
 import { FacebookShareCount, FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
+var Moment = require("moment");
 
 // import "./style.css"
 // import logo from '../../media/logo.png'
@@ -102,6 +103,7 @@ export default function BlogPost(props) {
                               />
                             </div> */}
             <h1 className="blog-title">{RichText.asText(doc.data.now_title)}</h1>
+            <p>Enjoy an update on the life of Ryan Brown as of {Moment(doc.last_publication_date).format("MMMM DD, YYYY")}</p>
             <RichText
               className="modal-description"
               render={doc.data.now_content}
