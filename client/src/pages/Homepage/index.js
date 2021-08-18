@@ -10,6 +10,7 @@ import HomeStoreBlock from "../../components/homepage/HomeStoreBlock"
 import HomeSubscribeBlock from "../../components/homepage/HomeSubscribeBlock"
 import Footer from "../../components/Footer/index"
 import forestImg from "../../media/forest.jpg"
+import {Link} from 'react-router-dom'
 
 export default class Homepage extends Component {
 
@@ -59,6 +60,7 @@ export default class Homepage extends Component {
                <HomeAuthorBlock></HomeAuthorBlock>
                {/* <HomeSubscribeBlock></HomeSubscribeBlock> */}
                {/* <HomeStoreBlock></HomeStoreBlock> */}
+             
             </div>
             
         </div>

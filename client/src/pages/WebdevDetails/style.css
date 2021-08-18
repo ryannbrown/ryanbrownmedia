@@ -5,7 +5,7 @@
 
 .work-post-page .blog-content {
     text-align:left;
-    margin:50px 0px;
+    margin:50px 25px;
 }
 
 .image-grid{
@@ -25,4 +25,6 @@
 .works-description-img-1, .works-description-img-2 {
     max-width:950px;
     height:auto;
+    width:100%;
 }
+

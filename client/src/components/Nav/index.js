@@ -242,8 +242,8 @@ export default class Nav extends Component {
             <div className="nav-right">
               <Link to="/about">about</Link>
               <Link to="/now">now</Link>
-              <Link to="/thoughts">thoughts</Link>
-              <Link to="/webdev">web dev</Link>
+              <Link to="/blog">thoughts</Link>
+              <Link to="/portfolio">web dev</Link>
             </div>
             <div id="overlay"></div>
             <div className="inner-menu">

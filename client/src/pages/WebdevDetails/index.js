@@ -64,7 +64,7 @@ export default function WebdevDetails(props) {
         
       <div className="work-post-page">
         <div className="back-link">
-          <Link to="/webdev"><FontAwesomeIcon className="icon-margin" icon={faChevronLeft}></FontAwesomeIcon>back</Link>
+          <Link to="/portfolio"><FontAwesomeIcon className="icon-margin" icon={faChevronLeft}></FontAwesomeIcon>back</Link>
         </div>
         {doc ? (
           <div className="blog-content">

@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-
+import "../../App.css"
 import "./style.css";
 import Prismic from "prismic-javascript";
 // import { Date, Link, RichText } from "prismic-reactjs";
@@ -119,25 +119,54 @@ console.log("all years", allYears)
 
 
   if (doc) {
+    // var grid = doc.map(
+    //   (post) => (
+    //     <li className="work">
+   
+    //       <Link to={`/webdev/${post.uid}`}>
+    //         <div className="work-description">
+    //         <p className="work-title">{post.data.work_title[0].text}</p>
+    //         <p className="work-subtitle">{post.data.work_subtitle[0].text}</p> 
+    //         </div>
+ 
+    //         <img loading="lazy"
+    //           className="blog-img"
+    //           alt="cover"
+    //           src={post.data.work_main_img.url}
+    //           />
+    //       </Link>
+    //       {/* <p>{post.data.date}</p> */}
+    //       {/* <p>{post.data.work_description[0].text}</p> */}
+    //     </li>
+    //   )
+    //   // <div>post</div>
+    //   // <h1>{RichText.asText(doc.data.title)}</h1>
+    // );
     var data = doc.map(
       (post) => (
-        <li className="work">
-   
-          <Link to={`/webdev/${post.uid}`}>
-            <div className="work-description">
-            <p className="work-title">{post.data.work_title[0].text}</p>
-            <p className="work-subtitle">{post.data.work_subtitle[0].text}</p> 
-            </div>
- 
-            <img loading="lazy"
-              className="blog-img"
+        <div className="job-post">
+          <div className="col-left">
+          <img loading="lazy"
+              className="job-img"
               alt="cover"
               src={post.data.work_main_img.url}
               />
-          </Link>
+          </div>
+          <div className="col-right">
+          {/* <Link to={`/webdev/${post.uid}`}> */}
+            <div className="work-description">
+            <p className="work-title">{post.data.work_title[0].text}</p>
+            <p className="work-subtitle">{post.data.work_subtitle[0].text}</p> 
+            <Link className="thebtn" to={`/portfolio/${post.uid}`}>Explore</Link>
+            </div>
+ 
+         
+          {/* </Link> */}
+          </div>
+   
           {/* <p>{post.data.date}</p> */}
           {/* <p>{post.data.work_description[0].text}</p> */}
-        </li>
+        </div>
       )
       // <div>post</div>
       // <h1>{RichText.asText(doc.data.title)}</h1>
@@ -167,7 +196,7 @@ console.log("all years", allYears)
           // backgroundAttachment: `fixed`,
           // height: `${this.props.height}`,
           minHeight: `100vh`,
-          padding:"100px 0px",
+          padding:"100px 15px",
           width: "100%",
           color: "white",
           display: `flex`,
@@ -201,12 +230,12 @@ console.log("all years", allYears)
       
         <div>
           {doc ? (
-            <div className="works-wrapper">
+            <div >
               {doc.length > 0 ?
-               <div>
-                   <ul>
+               <div className="works-wrapper">
+                   {/* <ul> */}
                {data}
-                   </ul>
+                   {/* </ul> */}
                </div> : <div>No Items for these dates</div>
             }
              

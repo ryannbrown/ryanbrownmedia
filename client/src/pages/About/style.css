@@ -323,6 +323,12 @@ min-height:70vh;
   left: 53%;
 }
 
+@media(max-width:667px) {
+
+}
+
+
+
 
 
 
@@ -332,3 +338,58 @@ min-height:70vh;
   width: 400px;
   }
 }
+
+
+@media (max-width:667px) {
+
+  .about-page {
+    padding:0px 25px !important;
+    background-color: #f4f4f4;
+  }
+  .about-img {
+  height:2.5vh !important;
+  background-image:none !important;
+  }
+
+  .white-block {
+    display:none !important;
+  }
+
+
+
+  .juneau {
+    top: 15% !important;
+    left: 7% !important;
+  }
+  
+  .vilcabamba {
+    top: 61% !important;
+    left: 25% !important;
+  }
+  
+  .lni-home {
+    top: 35% !important;
+    left: 22% !important;
+  }
+  
+  .colorado {
+    left: 16% !important;
+    top: 30% !important;
+
+  }
+  .budapest {
+    left: 51% !important;
+    top: 24% !important;
+  }
+  .thailand {
+    left: 72.5% !important;
+    top: 43% !important;
+  }
+  
+  .zambia {
+    top: 59% !important;
+    left: 52% !important;
+  }
+
+
+    }

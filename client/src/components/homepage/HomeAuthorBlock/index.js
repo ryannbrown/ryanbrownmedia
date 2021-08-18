@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
+import "../../../App.css"
 // import profPic from "../../media/5.PNG"
 import ryanImg from "../../../media/ryan.jpg";
 import {Link} from "react-router-dom"
@@ -51,6 +52,11 @@ export default class HomeAuthorBlock extends Component {
               {/* <p> </p> */}
               <p>I am a freelancer based out of Raleigh, NC. I am a hiking and traveling enthusiast, dad, snowboarder, thinker, and poet. Alright, I'm not a poet but I wish I could say I were. Thanks for visting my website. This is a place to learn more about the work I offer, as a well as a place for me to express my thoughts and share some of my experiences. Life and work can live together, and oh are they a journey.</p>
               {/* <Link to="/about"><button>Get to know me</button></Link> */}
+              <div className="hp-btn-block">
+                   <Link className="thebtn" to="/portfolio" >Portfolio</Link>
+                   <Link className="thebtn" to="/now" >Now</Link>
+                   <Link className="thebtn" to="/blog">Blog</Link>
+               </div>
             </div>
           </div>
           <br></br>
