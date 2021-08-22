@@ -196,7 +196,7 @@ console.log("all years", allYears)
           // backgroundAttachment: `fixed`,
           // height: `${this.props.height}`,
           minHeight: `100vh`,
-          padding:"100px 15px",
+          padding:"50px 15px",
           width: "100%",
           color: "white",
           display: `flex`,
